@@ -11,5 +11,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3001/todos/delete/63e581839b6699b14bce6c39
+DELETE http://localhost:3001/todo/delete/63e581839b6699b14bce6c39
 
