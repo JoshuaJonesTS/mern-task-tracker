@@ -6,5 +6,10 @@ POST http://localhost:3001/todos/new
 Content-Type: application/json
 
 {
-    "text": "Get the bread"
+    "text": "Get the milk"
 }
+
+###
+
+DELETE http://localhost:3001/todos/delete/63e581839b6699b14bce6c39
+
