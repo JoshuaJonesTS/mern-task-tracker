@@ -14,4 +14,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/mern-todo', {
     .then(() => console.log('Connected to DB'))
     .catch(console.error);
 
-app.listen(3001, () => console.log('Server started on port 3001'))
+app.listen(3001, () => console.log('Server started on port 3001'));

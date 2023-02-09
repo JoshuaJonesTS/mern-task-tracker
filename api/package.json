@@ -2,9 +2,9 @@
   "name": "mern-task-tracker-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server,js"
+    "start": "nodemon server.js"
   },
   "author": "JoshuaJonesTS",
   "license": "ISC",
