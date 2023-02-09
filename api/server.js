@@ -22,4 +22,14 @@ app.get('/todos', async (req, res) => {
     res.json(todos);
 });
 
+app.get('/todos/new', (req, res) => {
+    const todos = new Todo({
+        text: req.body.text
+    });
+
+    todos.save();
+
+    res.json(todos);
+})
+
 app.listen(3001, () => console.log('Server started on port 3001'));
