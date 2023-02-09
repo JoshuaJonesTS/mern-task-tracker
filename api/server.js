@@ -32,7 +32,7 @@ app.post('/todos/new', (req, res) => {
     res.json(todos);
 });
 
-app.delete('/todo/delete/:id', async(req, res) => {
+app.delete('/todos/delete/:id', async(req, res) => {
     const result = await Todo.findByIdAndDelete(req.params.id);
 
     res.json(result);
