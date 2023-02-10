@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "start": "concurrently \"cd client && npm start\" \"cd api && nodemon server\""
   }
 }
