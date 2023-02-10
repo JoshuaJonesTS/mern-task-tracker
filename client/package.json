@@ -12,8 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server server.js",
-    "develop": "concurrently \"cd api && nodemon server\" \"cd client && npm start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
