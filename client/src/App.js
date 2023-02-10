@@ -28,7 +28,7 @@ function App() {
       <div className="todos">
         {
           todos.map(todo => (
-            <div classname="todo">
+            <div classname="todo" key={todo._id}>
               <div classnName="checkbox"></div>
               <div className="text">{ todo.text }</div>
               <div className="delete-todo"></div>
