@@ -20,6 +20,19 @@ function App() {
     .catch(err => console.error("Error: ", err))
   }
 
+  const completeTodo = async id => {
+    const data = fetch(API_BASE + "/todo/complete/" + id)
+      .then(res => res.json());
+
+    setTodos(todos => todos.map(todo => {
+      if(todo._id === data._id) {
+        todo.complete = data.complete;
+      }
+      
+      return todo;
+    }))
+  }
+
   return (
     <div className="App">
       <h1>Welcome, Tyler</h1>
@@ -28,7 +41,12 @@ function App() {
       <div className="todos">
         {
           todos.map(todo => (
-            <div classname={"todo" + (todo.complete ? "is-complete" : "")} key={todo._id}>
+            <div 
+            classname={
+              "todo" + (todo.complete ? "is-complete" : ""
+            )} 
+            key={todo._id}
+            onClick={() => completeTodo(todo._id)}>
               <div classnName="checkbox"></div>
               <div className="text">{ todo.text }</div>
               <div className="delete-todo"></div>
