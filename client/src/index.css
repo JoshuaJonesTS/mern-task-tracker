@@ -54,7 +54,7 @@ h4 {
 	opacity: 0.8;
 }
 
-.todo, .checkbox {
+.todo .checkbox {
 	width: 20px;
 	height: 20px;
 	margin-right: 16px;
@@ -64,20 +64,20 @@ h4 {
 	transition: 0.4s;
 }
 
-.todo, .is-complete, .checkbox {
+.todo.is-complete .checkbox {
 	background-color: var(--primary);
 	background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
 }
 
-.todo, .text {
+.todo .text {
 	font-size: 20px;
 }
 
-.todo, .is-complete, .text {
+.todo.is-complete .text {
 	text-decoration: line-through;
 }
 
-.todo,  .delete-todo {
+.todo .delete-todo {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
