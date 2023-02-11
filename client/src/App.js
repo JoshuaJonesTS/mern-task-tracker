@@ -33,6 +33,14 @@ function App() {
     }))
   }
 
+  const deleteTodo = async id => {
+    const data = await fetch(API_BASE + "todo/delete/" + id, {
+      method: "DELETE"
+    }).then(res => res.json());
+
+    setTodos(todos => todos.filter(todo => todo._id !== data._id));
+  }
+
   return (
     <div className="App">
       <h1>Welcome, Tyler</h1>
@@ -49,7 +57,9 @@ function App() {
             onClick={() => completeTodo(todo._id)}>
               <div classnName="checkbox"></div>
               <div className="text">{ todo.text }</div>
-              <div className="delete-todo"></div>
+              <div 
+                className="delete-todo" onClick={() => deleteTodo(todo._id)}>
+              </div>
             </div>
           ))
         }
