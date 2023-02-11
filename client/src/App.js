@@ -8,7 +8,9 @@ function App() {
   const [newTodo, setNewTodo] = useState("");
 
   useEffect(() => {
-    GetTodos()
+    GetTodos();
+
+    console.log(todos);
   }, []);
 
   const GetTodos = () => {
@@ -28,7 +30,7 @@ function App() {
       }
 
       return todo;
-    }));
+    }))
   }
 
   const deleteTodo = async id => {
@@ -36,7 +38,7 @@ function App() {
       method: "DELETE"
     }).then(res => res.json());
 
-    setTodos(todos => todos.filter(todo => todo._id !== data.result._id));
+    setTodos(todos => todos.filter(todo => todo._id !== data._id));
   }
 
   const addTodo = async () => {
