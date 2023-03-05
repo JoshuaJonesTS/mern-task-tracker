@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 3001
 
 app.use(express.json());
 app.use(cors());
@@ -13,6 +14,10 @@ mongoose.connect(process.env.MONGO_DB).
 
 // Models
 const Todo = require('./models/Todo');
+
+app.use('/', (req, res) => {
+	
+})
 
 app.get('/todos', async (req, res) => {
 	const todos = await Todo.find();
@@ -56,4 +61,4 @@ app.put('/todo/update/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(3001);
+app.listen(PORT);
