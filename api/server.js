@@ -58,4 +58,4 @@ app.put('/todo/update/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}...`));
