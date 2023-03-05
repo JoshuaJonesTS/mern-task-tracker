@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 require('colors');
@@ -17,9 +16,9 @@ connectDB();
 const Todo = require('./models/Todo');
 
 app.get('/todos', async (req, res) => {
-	// const todos = await Todo.find();
+	const todos = await Todo.find();
 
-	// res.json(todos);
+	res.json(todos);
 });
 
 app.post('/todo/new', (req, res) => {
