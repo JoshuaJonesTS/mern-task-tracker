@@ -17,9 +17,9 @@ connectDB();
 const Todo = require('./models/Todo');
 
 app.get('/todos', async (req, res) => {
-	const todos = await Todo.find();
+	// const todos = await Todo.find();
 
-	res.json(todos);
+	// res.json(todos);
 });
 
 app.post('/todo/new', (req, res) => {
