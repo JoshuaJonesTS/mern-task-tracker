@@ -8,10 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_DB, {
-	useNewUrlParser: true, 
-	useUnifiedTopology: true 
-}).then(() => console.log("Connected to MongoDB")).catch(console.error);
+mongoose.connect(process.env.MONGO_DB).
+	then(() => console.log("Connected to MongoDB")).catch(console.error);
 
 // Models
 const Todo = require('./models/Todo');
