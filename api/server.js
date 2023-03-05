@@ -5,12 +5,12 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001
+const connectDB = require('./config/db');
 
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_DB).
-	then(() => console.log("Connected to MongoDB")).catch(console.error);
+connectDB();
 
 // Models
 const Todo = require('./models/Todo');
