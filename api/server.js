@@ -15,10 +15,6 @@ mongoose.connect(process.env.MONGO_DB).
 // Models
 const Todo = require('./models/Todo');
 
-app.use('*', (req, res) => {
-
-})
-
 app.get('/todos', async (req, res) => {
 	const todos = await Todo.find();
 
